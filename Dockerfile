@@ -1,4 +1,5 @@
 ARG VER=latest
-FROM registry.fedoraproject.org/fedora:$VER
+FROM ubuntu:latest
 
-RUN dnf -y install fakeroot && dnf clean all
+RUN apt-get update && apt-get -y install python3 fakeroot
+
